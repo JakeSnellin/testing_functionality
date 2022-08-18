@@ -1,21 +1,19 @@
 
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export function HomePage(props){
 
-    const pathList = (
-    <ul className='gallery-container'>
-        {props.pathListItems.map((slug, index) => (
-        <li key={index}>
-            <Link to={slug}>
-                <div className='img-container'></div>
-            </Link>
-        </li>
-        ))}
+    useEffect(() =>{
+        props.setShowHeader(true);
+    },[])
+
+    const artistListItems = (
+    <ul className='home-gallery-container'>
+        {props.artistUrls}
     </ul>
     );
 
     return (
-        <div>{pathList}</div>
+        <div><ul>{artistListItems}</ul></div>
     )
 }

@@ -1,46 +1,63 @@
-.gallery-container a{
+h1, p, a{
+    font-size: 18px;
+    font-family: 'HKGrotesk-Regular', sans-serif;
+    color: #454545;
+}
+
+.home-gallery-container a{
     display: block;
 }
 
-.gallery-container{
+.home-gallery-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.gallery-container li{
+.home-gallery-container li{
     width: 50%;
     list-style: none;
 }
 
 .img-container{
     width: 100%;
-    padding-top: calc((9 / 8) * 100%); /* 1:1 Aspect Ratio 626.67px */ 
+    padding-top: calc((3 / 4) * 100%);
     position: relative; /* If you want text inside of it */
-    background-image: url('../../public/Images/705x626.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .description{
-    font-size: 24px;
-    font-family: 'HKGrotesk-Regular', sans-serif;
     line-height: 34px;
-    margin-top: 74px;
+    margin-top: 33px;
 }
 
 .bio-image-container{
-    width: 417px;
-    height: 390px;
+    width: 500px;
+    height: 353px;
 }
 
 .bio-image{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 50% -5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+}
+
+.social-media{
+    margin-top: 28px;
+}
+
+.social-icon{
+    font-size: 26px;
+    color: #454545;
+}
+
+.social-icon:nth-child(n+2){
+    margin-left: 28px;
 }
 
 .bio-container{
@@ -50,10 +67,33 @@
 
 .bio-aside{
     width: 25.83333333333333%;
+    height: 467px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.bio-info{
+    position: fixed;
+    bottom: 0.75em;
+    left: 0.75em;
+}
+
+.bio-info h1{
+    padding: 5px 0;
+}
+
+.bio-aside-text{
+    margin-bottom: 20px;
+}
+
+.bio-aside p{
+    margin: 28px 0;
+    width: 170px;
 }
 
 .bio-content{
-    width: 100%;
+    width: 500px;
 }
 
 .wrapper{
@@ -62,13 +102,13 @@
 
 .bio-elements-enter{
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.9);
 }
 
 .bio-elements-enter-active{
     opacity: 1;
     transform: translate(0);
-    transition: opacity 200ms, transform 200ms;
+    transition: opacity 300ms, transform 300ms;
 }
 
 .bio-elements-exit{
@@ -77,8 +117,8 @@
 
 .bio-elements-exit-active{
     opacity: 0;
-    transform: scale(0.5);
-    transition: opacity 200ms, transform 200ms;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
 }
 
 .header{
@@ -92,5 +132,15 @@
     height: 61px;
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
 }
+
+/*.img-corner{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}*/
