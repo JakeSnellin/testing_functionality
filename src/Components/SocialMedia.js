@@ -6,7 +6,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export function SocialMedia (props){
 
-    const mapLinks = () => {
+    const socialLinks = () => {
         if (props.socialLinks.length > 0){
             return props.socialLinks.map((item, index) => {
                 if(item.includes("twitter")){
@@ -24,7 +24,7 @@ export function SocialMedia (props){
 
     return (
         <div>
-            {mapLinks()}
+            {socialLinks()}
         </div>
     )
 }

@@ -43,6 +43,20 @@ export async function getBio(onSuccess, slugObj){
         socialMediaLinks {
           raw
         }
+        gallery {
+          galleryImage {
+            id
+            url
+          }
+        }
+        discoverLink
+        discoverGraphic {
+          url(
+            transformation:{
+              image: { resize: { width: 140, height: 156, fit: clip } }
+            })
+          id
+        }
       }
     }
   }

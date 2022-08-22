@@ -14,6 +14,6 @@ export function HomePage(props){
     );
 
     return (
-        <div><ul>{artistListItems}</ul></div>
+        <div>{artistListItems}</div>
     )
 }

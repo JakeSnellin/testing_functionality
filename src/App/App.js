@@ -6,6 +6,7 @@ import { Bio } from '../Components/Bio';
 import { Header } from '../Components/Header';
 import { useEffect, useState } from "react";
 import { getArtistUrls } from "../Util/Hygraph";
+import { getInstaData } from "../Util/Instagram";
 
 function App() {
 
@@ -14,17 +15,15 @@ function App() {
   const [artists, setArtists] = useState([]);
 
   const getArtists = (urls, slugs) =>{
-    setArtists(addArtistLinks(urls, slugs)) 
+    setArtists(mapArtistUrls(urls, slugs)) 
 }
 
-const addArtistLinks = (url, slug) => {
-  return slug.map((slug, index) => (
-      <li key={index}><Link to={slug}><div className='img-container' style={{backgroundImage: `url(${url[index]})`}} ></div></Link></li>
+const mapArtistUrls = (url, slug) => {
+    return slug.map((slug, index) => (
+        <li key={index}><Link to={slug}><div className='img-container' style={{backgroundImage: `url(${url[index]})`}}></div></Link></li>
+    )
   )
-)
-
 }
-
   useEffect(() =>{
     getArtistUrls(getArtists);
   },[])

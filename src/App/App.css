@@ -1,4 +1,4 @@
-h1, p, a{
+h1, p, a, .credits{
     font-size: 18px;
     font-family: 'HKGrotesk-Regular', sans-serif;
     color: #454545;
@@ -60,26 +60,31 @@ h1, p, a{
     margin-left: 28px;
 }
 
-.bio-container{
+.bio-outer-container{
     display: flex;
     width: 100%;
 }
 
 .bio-aside{
     width: 25.83333333333333%;
-    height: 467px;
     display: flex;
     justify-content: end;
     flex-direction: column;
 }
 
-.bio-info{
+.bio-inner-container{
     position: fixed;
     bottom: 0.75em;
     left: 0.75em;
+    display: flex;
+    flex-direction: row;
 }
 
-.bio-info h1{
+.bio-info{
+    align-self: flex-end;
+}
+
+.bio-inner-container h1{
     padding: 5px 0;
 }
 
@@ -94,6 +99,7 @@ h1, p, a{
 
 .bio-content{
     width: 500px;
+    margin-top: 61px;
 }
 
 .wrapper{
@@ -102,7 +108,7 @@ h1, p, a{
 
 .bio-elements-enter{
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.5);
 }
 
 .bio-elements-enter-active{
@@ -117,7 +123,7 @@ h1, p, a{
 
 .bio-elements-exit-active{
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.5);
     transition: opacity 300ms, transform 300ms;
 }
 
@@ -132,6 +138,71 @@ h1, p, a{
     height: 61px;
     display: flex;
     align-items: center;
+    position: fixed;
+}
+
+.bio-gallery-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 439.58px;
+}
+
+.bio-gallery-img-container{
+    width: 100%;
+    padding-top: calc((4 / 3) * 100%);
+    position: relative; /* If you want text inside of it */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bio-gallery-container li{
+    width: 32.5%;
+    list-style: none;
+}
+
+.credits ul{
+    list-style: none;
+}
+
+.discover-graphic-container{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 140px;
+    height: 156px;
+    left: -5%;
+    top: 10%;
+}
+
+.discover-graphic{
+    width: 100%;
+    height: 100%;
+}
+
+iframe{
+    width: 500px;
+    height: 281.25px;
+}
+
+.news-feed-image-container{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 360px;
+    height: 270px;
+
+}
+
+.news-feed-container{
+    width: 725px;
+    height: 100%;
+    list-style: none;
 }
 
 /*.img-corner{
