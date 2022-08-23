@@ -64,4 +64,5 @@ export async function getBio(onSuccess, slugObj){
 
   const data = await graphQLClient.request(query, slugObj.variables);
   onSuccess(data);
+  //return data;
 }
