@@ -37,7 +37,6 @@ export function InstaFeed(props) {
                     </div>
                     <p>{postObj.caption}</p>
                     <p>{'posted ' + timeSince(postObj.timestamp) + ' ago'}</p>
-                    <p>{postObj.username}</p>
                 </li>
             )
             })
